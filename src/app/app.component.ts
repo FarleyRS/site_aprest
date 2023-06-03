@@ -9,7 +9,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'site_aprest';
 
-  onVibrate():void{
-    window.navigator.vibrate(1000);
+  onVibrate(ms:any):void{
+    window.navigator.vibrate(ms);
+  }
+
+  ngOnInit(){
+    this.onVibrate([800,200,500]);
   }
 }
