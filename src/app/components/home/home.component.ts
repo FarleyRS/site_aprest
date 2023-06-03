@@ -12,15 +12,16 @@ export class HomeComponent {
   constructor(private router: Router) { }
   
   ngOnInit() {
-    setTimeout(() => {
-      this.showButton = true;   
-    }, 7000); 
+    
   }
 
   onActivateVibration() {
     // Define o atraso de 2000 milissegundos (2 segundos)
-    navigator.vibrate([500, 200, 800, 200, 800]);
-    this.router.navigate(['form']);
+    navigator.vibrate([800, 100, 800, 200, 800]);
+   
+    setTimeout(() => {
+      this.router.navigate(['form']);
+    }, 5000); 
     console.log("Procurando algo?");
   }
 
