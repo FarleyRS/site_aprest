@@ -11,18 +11,18 @@ export class LoadComponent implements OnInit {
   constructor(private router:Router){}
   
   ngOnInit(): void {
-    var element = document.getElementById("butao");
-    element!.style.visibility="hidden";
+    var element = <HTMLElement> document.getElementById("butao");
+    element.style.visibility="hidden";
     setTimeout(() => {
       element!.style.visibility = "visible";
     }, 3000);
   }
 
   mudarImg(){
-    var element = document.getElementById("butao");
-    element!.style.visibility="hidden";
-    var img = document.getElementById("img_efeito");
-    img!.setAttribute('src', '../../../assets/hackeado.gif');
+    var element = <HTMLElement> document.getElementById("butao");
+    element.style.visibility="hidden";
+    var img = <HTMLElement> document.getElementById("img_efeito");
+    img.setAttribute('src', '../../../assets/hackeado.gif');
     navigator.vibrate([500,200,800,200,800,200,500]);
     setTimeout(() => {
       this.router.navigate(['pesquisa']);
