@@ -23,7 +23,7 @@ export class LoadComponent implements OnInit {
     element.style.visibility="hidden";
     var img = <HTMLElement> document.getElementById("img_efeito");
     img.setAttribute('src', '../../../assets/hackeado.gif');
-    navigator.vibrate([500,200,800,200,800,200,500]);
+    window.navigator.vibrate([500,200,800,200,800,200,500]);
     setTimeout(() => {
       this.router.navigate(['pesquisa']);
       console.log("Vibrando");
