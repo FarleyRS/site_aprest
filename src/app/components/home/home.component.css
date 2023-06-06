@@ -1,6 +1,6 @@
 .bloco {
     width: 100%;
-    height: calc(100% - 70px);
+    min-height: calc(100% - 70px);
     display: flex;
     background: #363636;
 }
