@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PesquisaComponent } from './components/pesquisa/pesquisa.component';
+
 import { FormsModule } from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire/compat';
@@ -14,12 +15,18 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
+import { LoadComponent } from './components/load/load.component';
+import {MatButtonModule} from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    PesquisaComponent
+    PesquisaComponent,
+    LoadComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +36,9 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
